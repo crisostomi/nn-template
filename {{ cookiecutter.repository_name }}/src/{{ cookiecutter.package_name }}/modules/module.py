@@ -19,7 +19,6 @@ class CNN(nn.Module):
             nn.SiLU(),
             nn.MaxPool2d(2),
         )
-        self.conv2 = nn.Sequential()
         self.out = nn.Linear(32 * 7 * 7, num_classes)
 
     def forward(self, x):
